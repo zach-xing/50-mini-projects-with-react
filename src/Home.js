@@ -8,7 +8,7 @@ const MyContainner = styled.main`
   box-sizing: border-box;
   margin: 0;
   width: 100%;
-  padding: 20px 12%;
+  padding: 20px 20%;
   font-size: 20px;
   color: white;
   background-color: #281839;
@@ -37,6 +37,7 @@ const MyOl = styled.ol`
   }
   a {
     color: #ff9e11;
+    font-weight: 550;
   }
 `;
 
@@ -75,6 +76,7 @@ function Home() {
         来实现，然后还有些其他的小组件，比如按钮，是来自字节的UI组件
         <code> arco.design </code>的组件（因为不想自己来写了，哈哈~）
       </Paragraph>
+
       <h2>官方链接</h2>
       <MyOl>
         <li>
