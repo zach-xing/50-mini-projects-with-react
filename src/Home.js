@@ -68,9 +68,6 @@ function Home() {
       <h1>50 unique mini-projects</h1>
       <Paragraph>
         这是来自 <code> 50 Projects in 50 Days </code>
-        {/* <a href="https://github.com/bradtraversy/50projects50days">
-          50 Projects in 50 Days
-        </a> */}
         的项目，这个项目使用<code> HTML/CSS and JavaScript </code>
         来实现，所以自己就用<code> React.js + styled-components </code>
         来实现，然后还有些其他的小组件，比如按钮，是来自字节的UI组件
@@ -93,10 +90,10 @@ function Home() {
       <h2>在线 Demo</h2>
       <MyOl>
         {paths.length &&
-          paths.map((item, index) => {
+          paths.map((item) => {
             let label = item.split("/")[1].slice(2);
             return (
-              <li>
+              <li key={label}>
                 <Link target="_blank" rel="noopener noreferrer" to={label}>
                   {label}
                 </Link>
