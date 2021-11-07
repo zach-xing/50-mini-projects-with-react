@@ -38,34 +38,30 @@ const ShowDiv = styled.div`
 function DadJokes() {
 
   const [joke, setJoke] = useState("")
+  const [query, setQuery] = useState(0);
 
   useEffect(() => {
-    fetchJoke()
-  }, [])
-
-  // 发送请求
-  const fetchData = async () => {
-    const res = await fetch("https://icanhazdadjoke.com", {
-      headers: {
-        Accept: "application/json"
-      }
+    // 发送请求
+    const fetchData = async () => {
+      const res = await fetch("https://icanhazdadjoke.com", {
+        headers: {
+          Accept: "application/json",
+        },
+      });
+      const data = await res.json();
+      return data.joke;
+    };
+    fetchData().then((res) => {
+      setJoke(res);
     });
-    const data = await res.json();
-    return data.joke
-  };
-
-  const fetchJoke = () => {
-     fetchData().then((res) => {
-       setJoke(res);
-     });
-  }
+  }, [query]);
 
   return (
     <Main>
       <ShowDiv>
         <h1>Don't Laugh Challenge</h1>
         <p>{joke}</p>
-        <Button type="primary" size="large" onClick={fetchJoke}>
+        <Button type="primary" size="large" onClick={() => setQuery(query + 1)}>
           Change
         </Button>
       </ShowDiv>

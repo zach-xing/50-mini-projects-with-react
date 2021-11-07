@@ -12,7 +12,6 @@ const MyContainner = styled.main`
   font-size: 20px;
   color: white;
   background-color: #281839;
-  height: 100vh;
   &::-webkit-scrollbar {
     width: 0 !important;
   }
@@ -53,6 +52,8 @@ const context = require.context("./views", true, /\.js$/);
 const paths = context.keys();
 
 function Home() {
+
+
   return (
     <MyContainner>
       <MyInfo>
@@ -77,7 +78,11 @@ function Home() {
       <h2>官方链接</h2>
       <MyOl>
         <li>
-          <a href="https://github.com/bradtraversy/50projects50days" target="_blank" rel="noreferrer" >
+          <a
+            href="https://github.com/bradtraversy/50projects50days"
+            target="_blank"
+            rel="noreferrer"
+          >
             50 Projects in 50 Days
           </a>
         </li>
@@ -94,7 +99,12 @@ function Home() {
             let label = item.split("/")[1].slice(2);
             return (
               <li key={label}>
-                <Link target="_blank" rel="noopener noreferrer" to={label}>
+                <Link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  to={label}
+                  title={label}
+                >
                   {label}
                 </Link>
               </li>
