@@ -70,7 +70,7 @@ function Home() {
       <Paragraph>
         这是来自 <code> 50 Projects in 50 Days </code>
         的项目，这个项目使用<code> HTML/CSS and JavaScript </code>
-        来实现，所以自己就用<code> React.js + styled-components </code>
+        来实现，所以自己就用<code> React.js ( Hooks ) + styled-components </code>
         来实现，然后还有些其他的小组件，比如按钮，是来自字节的UI组件
         <code> arco.design </code>的组件（因为不想自己来写了，哈哈~）
       </Paragraph>
