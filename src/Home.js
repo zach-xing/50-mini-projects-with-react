@@ -103,7 +103,6 @@ function Home() {
                   target="_blank"
                   rel="noopener noreferrer"
                   to={label}
-                  title={label}
                 >
                   {label}
                 </Link>
