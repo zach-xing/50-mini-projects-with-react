@@ -48,7 +48,7 @@ const Paragraph = styled.p`
   }
 `;
 
-const context = require.context("./views", true, /\.js$/);
+const context = require.context("./views", true, /index.js$/);
 const paths = context.keys();
 
 function Home() {
@@ -96,6 +96,7 @@ function Home() {
       <MyOl>
         {paths.length &&
           paths.map((item) => {
+            console.log(item);
             let label = item.split("/")[1].slice(2);
             return (
               <li key={label}>

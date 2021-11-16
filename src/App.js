@@ -3,7 +3,7 @@ import { Route, Switch, useLocation } from "react-router-dom";
 import "./App.css";
 import Home from "./Home";
 
-const context = require.context("./views", true, /\.js$/);
+const context = require.context("./views", true, /index.js$/);
 const paths = context.keys();
 
 function App() {
