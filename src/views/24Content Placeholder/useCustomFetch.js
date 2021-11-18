@@ -1,5 +1,5 @@
 /**
- * 自定义一个简易的 useSWR
+ * 自定义一个简易的 获取“数据”的钩子
  */
 import {useState, useEffect} from 'react'
 
