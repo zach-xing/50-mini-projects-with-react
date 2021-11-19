@@ -6,8 +6,8 @@ export const Nav = styled.main`
   left: 0;
   right: 0;
   transition: all 0.3s ease-in-out;
-  background-color: #222222;
-  color: white;
+  background-color: ${(props) => props.navColor.bgColor};
+  color: ${(props) => props.navColor.color};
   padding: 0 20%;
   height: 90px;
   display: flex;
@@ -67,6 +67,7 @@ export const Container = styled.div`
 export const Section = styled.div`
   padding: 0 20%;
   p {
+    font-size: 15px;
     line-height: 30px;
     letter-spacing: 1.2px;
   }
