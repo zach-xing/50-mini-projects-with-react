@@ -4,6 +4,8 @@
 
 （还在写。。。）
 
+27 还有点问题（之后换个方法）
+
 ## 介绍
 
 ![introduce](./docs/images/introduce.png)
