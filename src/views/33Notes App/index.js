@@ -7,10 +7,8 @@ const initalNote = {
 };
 
 const localNotes = (function () {
-  console.log('sdfqqq');
   let info = JSON.parse(localStorage.getItem("notes"));
   if (!!info) {
-    console.log(info);
     return info;
   } else {
     return [initalNote];
