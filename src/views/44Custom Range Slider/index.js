@@ -2,11 +2,13 @@ import React, { useState, useRef } from "react";
 import { Main, RangeContainer } from "./styled";
 
 function CustomRangeSlider() {
+  const [num, setNum] = useState(50);
   const [left, setLeft] = useState(110);
   const label = useRef();
 
   const handleInput = (e) => {
     const value = e.target.value;
+    setNum(value)
     const max = e.target.max;
     const min = e.target.min;
     const inputWidth = e.target.getBoundingClientRect().width;
@@ -25,7 +27,7 @@ function CustomRangeSlider() {
       <RangeContainer labelLeft={left}>
         <input type="range" min="0" max="100" onInput={handleInput} />
         <label ref={label} htmlFor="range">
-          50
+          {num}
         </label>
       </RangeContainer>
     </Main>

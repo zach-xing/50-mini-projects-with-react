@@ -9,7 +9,6 @@ function useCustomFetch(fetcher) {
   
   useEffect(() => {
     setLoading(true);
-    console.log("sdf");
     fetcher()
       .then((res) => {
         console.log('fetch', res);

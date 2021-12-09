@@ -4,7 +4,7 @@ import { settings } from "./data";
 import randomFunc from './randomFunc'
 
 function PasswordGenerator() {
-  const [result, setResult] = useState("sdfsdfsdfsdf");
+  const [result, setResult] = useState("");
   const [settingOptions, setSettingOptions] = useState([
     20,
     false,

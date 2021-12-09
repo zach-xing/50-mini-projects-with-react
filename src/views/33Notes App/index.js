@@ -11,7 +11,8 @@ const localNotes = (function () {
   if (!!info) {
     return info;
   } else {
-    return [initalNote];
+    const tmp = JSON.parse(JSON.stringify(initalNote));
+    return [tmp];
   }
 })();
 
@@ -21,7 +22,8 @@ function NotesApp() {
   // 添加 Note
   const handleAdd = () => {
     let arr = [...noteData];
-    arr.push(initalNote);
+     const tmp = JSON.parse(JSON.stringify(initalNote));
+    arr.push(tmp);
     setNoteData(arr);
     localStorage.setItem("notes", JSON.stringify(arr));
   };
@@ -65,7 +67,9 @@ function NotesApp() {
             <textarea
               onInput={(e) => handleInput(e, index)}
               className={item.hidden ? "hidden" : ""}
-            >{item.text}</textarea>
+              defaultValue=""
+              value={item.value}
+            />
           </Editor>
         );
       })}
