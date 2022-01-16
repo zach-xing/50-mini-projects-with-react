@@ -10,7 +10,7 @@ export const Main = styled.main`
 export const Photo = styled.div`
   height: 440px;
   width: 300px;
-  background: url("https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80")
+  background: url("https://avatars.githubusercontent.com/u/54023155?v=4")
     no-repeat center center/cover;
   margin: auto;
   cursor: pointer;

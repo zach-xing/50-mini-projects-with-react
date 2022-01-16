@@ -51,6 +51,7 @@ function Card() {
   const res = useCustomFetch(fetcher);
 
   useEffect(() => {
+    console.log(res);
     if(res !== null) {
       setData(res);
     }
