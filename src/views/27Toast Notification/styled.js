@@ -11,7 +11,7 @@ export const Main = styled.main`
 
 export const ToastsGroup = styled.div`
   position: fixed;
-  bottom: 10px;
+  top: 10px;
   right: 10px;
   display: flex;
   flex-direction: column;
